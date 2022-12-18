@@ -1,0 +1,26 @@
+
+body{
+    background-color: rgba(128, 128, 128, 0.466);
+}
+.container{
+    background-color: white;
+}
+
+#scroll-mod::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.062);
+	background-color: #F5F5F5;
+}
+
+#scroll-mod::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+
+}
+
+#scroll-mod::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
+}

@@ -1,0 +1,38 @@
+pre{
+    background: hsla(0,0%,78%,.3);
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    color: #353535;
+    direction: ltr;
+    font-style: normal;
+    min-width: 200px;
+    padding: 1em;
+    tab-size: 4;
+    text-align: left;
+    white-space: pre-wrap;
+}
+.image-style-align-left{
+    float: left;
+}
+.image-style-side {
+    float: right;
+}
+.image{
+    text-align: center;
+    display: block;
+}
+.image img{
+    width: 100%;
+}
+p img{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px){
+    .image img{
+        width: 100%;
+    }
+    p img{
+        width: 100%;
+    }
+}
