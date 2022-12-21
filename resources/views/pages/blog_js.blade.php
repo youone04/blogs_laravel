@@ -4,7 +4,7 @@
     <div class="row g-0">
      <div id="scroll-mod" class="col-sm-12 col-md-7 col-lg-7 col-xl-7 p-3 con-home">
     
-        @foreach ($blogs as $blog)
+        @foreach ($blogs_js as $blog)
         <div class="card mb-3" data-aos="fade-down" >
           <div class="row">
             <figure class="mod-figure">

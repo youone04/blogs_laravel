@@ -24,3 +24,36 @@ body{
 	background-color: #000000;
 	border: 2px solid #555555;
 }
+
+
+.con-home{
+    min-height: 100vh;
+}
+
+.mod-figure{
+	width: 33%;
+}
+.content-mod{
+	padding-left: 0;
+}
+
+@media screen and (max-width: 600px){
+    .image img{
+        width: 100%;
+    }
+    p img{
+        width: 100%;
+    }
+    .image_resized{
+        width: 100% !important;
+    }
+    .con-home{
+        min-height: auto;
+    }
+	.mod-figure{
+		width: 100%;
+	}
+	.content-mod{
+		padding-left: 14px;
+	}
+}

@@ -21,6 +21,17 @@
             }
         </style>
         <div id="container">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+            <a href="https://codebeautify.org/code-highlighter">HIGLIGHT</a>
             <form action="{{ route('test.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <input type="text" name="title" placeholder="Title"/>
@@ -29,6 +40,15 @@
                 <input type="file" name="cover"/>
                 <br/>
                 <br/>
+                <select id="category" name="category" class="form-select" aria-label="Default select example">
+                    <option value="" selected>Pilih</option>
+                    <option value="javascript">javascript</option>
+                    <option value="php">php</option>
+                    <option value="python">python</option>
+                    <option value="python">others</option>
+                  </select>
+                  <br/>
+                  <br/>
 
                 <textarea class="form-control" id="editor" name="editor"></textarea>
                 {{-- {{ csrf_field() }} --}}

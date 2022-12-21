@@ -10,21 +10,26 @@ class Test extends Controller
     //
 
     public function index(){
-        $blogs =  Content::get('content');
+        $blogs =  Content::get();
         // return $blog;
         return view('pages.home', [
+            'title' => 'Landing Page',
             'blogs' => $blogs
         ]);
     }
+
     public function store(Request $request)
     {
+        
         $request->validate([
             'editor' => 'required',
             'title' => 'required',
             'cover' => 'required',
+            'category' => 'required',
         ]);
+
+      
         $content = $request->input('editor');
-    
         if ($image = $request->file('cover')) {
             $destinationPath = 'cover_images/';
             $cover = date('YmdHis') . "." . $image->getClientOriginalExtension();
@@ -34,7 +39,8 @@ class Test extends Controller
             Content::create([
                 'title' => $request->title,
                 'cover' =>  $cover,
-                'content' => $content,               
+                'content' => $content,
+                'category' => $request->category,        
              ]);
 
         }

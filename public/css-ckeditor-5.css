@@ -28,11 +28,3 @@ p img{
     width: 100%;
 }
 
-@media screen and (max-width: 600px){
-    .image img{
-        width: 100%;
-    }
-    p img{
-        width: 100%;
-    }
-}

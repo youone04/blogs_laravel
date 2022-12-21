@@ -18,7 +18,9 @@ class CreateContentsTable extends Migration
             $table->string('title');
             $table->string('cover');
             $table->longText('content');
-            $table->boolean('status')->default(0)->change();
+            $table->integer('views')->default(0);
+            $table->boolean('status')->default(0);
+            $table->string('category');
             $table->timestamps();
         });
     }

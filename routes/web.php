@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JavascriptController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,11 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/blog-detail/{id}', [HomeController::class, 'detailBlogs']);
+
+
+Route::get('/blog-js', [JavascriptController::class, 'index']);
+
 
 Route::get('/admin', function () {
     return view('welcome');
