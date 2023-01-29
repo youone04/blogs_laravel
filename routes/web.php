@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KategoritController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,14 +17,19 @@ use App\Http\Controllers\KategoritController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/blog-detail/{id}', [HomeController::class, 'detailBlogs']);
+Route::get('/blog-kategori/blog-detail/{id}', [HomeController::class, 'detailBlogs']);
 
 
 Route::get('/blog-kategori/{kategori}', [KategoritController::class, 'index']);
 
 
-Route::get('/admin', function () {
-    return view('welcome');
-});
+// Route::get('/admin', function () {
+//     return view('welcome');
+// });
 
 Route::resource('test', Test::class);
 
+
+Auth::routes();
+
+Route::get('/home', 'AdminController@index')->name('home');

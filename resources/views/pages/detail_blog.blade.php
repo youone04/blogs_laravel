@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row g-0">
    <div id="scroll-mod" class="col-sm-12 col-md-7 col-lg-7 col-xl-7 p-3">
-      <div class="card mb-3" data-aos="fade-down">
+      <div class="cards mb-3" data-aos="fade-down">
         <div class="row">
           <figure style="width: 100%">
             <img style="border-radius: 20px;" class="card-img-tops col-4 w-100 p-3" src="{{ asset('cover_images') }}/{{ $blogs_detail->cover }}" alt="Card image cap">
